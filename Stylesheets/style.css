@@ -1,12 +1,21 @@
 /* *************************************************   
     GENERAL STYLES
 ************************************************** */
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Lora);
 .wrap{
     width: 90%;
      /*for large screens*/
    /* max-width: 1400px;*/
-    margin: 0 auto;
-    
+    margin: 0 auto;   
+}
+p{
+    color: #287ac3;
+    font-family: 'Lora', serif;
+}
+
+h1,h2,h3,h4,h5{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -43,11 +52,32 @@ ABOUT || AGENDA SECTION
 
 .about{
     padding: 80px 0px;
-    
-    
+    background-color: #ebebeb;
 }
 
+.abt{
+     -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    border-style: outset;
 
+}
+
+.abt:hover{
+    background-color: rgba(157, 153, 145, 0.88);
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
+.agend{
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    border-style: outset;
+}
+
+.agend:hover{
+    background-color: rgba(157, 153, 145, 0.88);
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
 
 
 
@@ -84,7 +114,30 @@ REGISTER SECTION.
 .register form{
     
 }
+@-webkit-keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
 
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
 
 /* *************************************************   
 VENUE SECTION.

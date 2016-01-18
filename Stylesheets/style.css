@@ -2,6 +2,10 @@
     GENERAL STYLES
 ************************************************** */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Lora);
+>>>>>>> f43f5c3d43250859e8defa34528984a5fd5500fe
 =======
 @import url(https://fonts.googleapis.com/css?family=Montserrat|Lora);
 >>>>>>> f43f5c3d43250859e8defa34528984a5fd5500fe
@@ -10,9 +14,12 @@
      /*for large screens*/
    /* max-width: 1400px;*/
 <<<<<<< HEAD
+<<<<<<< HEAD
     margin: 0 auto;
     
 =======
+=======
+>>>>>>> f43f5c3d43250859e8defa34528984a5fd5500fe
     margin: 0 auto;   
 }
 p{
@@ -23,6 +30,9 @@ p{
 h1,h2,h3,h4,h5{
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+<<<<<<< HEAD
+>>>>>>> f43f5c3d43250859e8defa34528984a5fd5500fe
+=======
 >>>>>>> f43f5c3d43250859e8defa34528984a5fd5500fe
 }
 
@@ -34,6 +44,24 @@ NAVIGATION
     width: 80px;
     padding-left: 0%;
 }
+#nav li{
+  display:inline;
+  list-style-type:none;
+  background-color:#ffffff;
+  float:right;
+  
+}
+#nav a{
+  padding:25px 25px;
+  background-color:#009B14;
+  text-decoration:none;
+  color:white;
+  
+}
+#nav a:hover{
+  background-color:#ffffff;
+  color:#000000;
+}
 
 
 
@@ -41,15 +69,73 @@ NAVIGATION
 /* *************************************************   
 HERO SECTION
 ************************************************** */
-.hero{
-    padding: 80px 0px;
-    background-color: grey;
+#space{
+  padding-bottom:140px;
+}
+.css-slideshow{
+   position: relative;
+   height: 270px;
+   width:100%;
+   background-size:auto ;
+}
+.css-slideshow figure{
+   width:100%;
+   position: absolute;
+}
+.css-slideshow figure img{
+  width:93%;
+  height:470px;
+position:relative;
+  
+}
+
+.css-slideshow figure{
+   opacity:0;
 }
 
 
+figure:nth-child(1) {
+  animation: xfade 48s 42s infinite;
+}
+figure:nth-child(2) {
+  animation: xfade 48s 36s infinite;
+}
+figure:nth-child(3) {
+  animation: xfade 48s 30s infinite;
+}
+figure:nth-child(4) {
+  animation: xfade 48s 24s infinite;
+}
+figure:nth-child(5) {
+  animation: xfade 48s 18s infinite;
+}
+figure:nth-child(6) {
+  animation: xfade 48s 12s infinite;
+}
+figure:nth-child(7) {
+  animation: xfade 48s 6s infinite;
+}
+figure:nth-child(8) {
+  animation: xfade 48s 0s infinite;
+}
 
-
-
+@keyframes xfade{
+   0%{
+      opacity: 1;
+   }
+   10.5% {
+      opacity:1;
+   }
+   12.5%{
+      opacity: 0;
+   }
+   98% {
+      opacity:0;
+   }
+   100% {
+      opacity:1;
+   }
+}
 
 
 
@@ -61,12 +147,15 @@ ABOUT || AGENDA SECTION
 .about{
     padding: 80px 0px;
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     
 }
 
 
 =======
+=======
+>>>>>>> f43f5c3d43250859e8defa34528984a5fd5500fe
     background-color: #ebebeb;
 }
 
@@ -93,6 +182,9 @@ ABOUT || AGENDA SECTION
     -webkit-transform:scale(1.2);
     transform:scale(1.2);
 }
+<<<<<<< HEAD
+>>>>>>> f43f5c3d43250859e8defa34528984a5fd5500fe
+=======
 >>>>>>> f43f5c3d43250859e8defa34528984a5fd5500fe
 
 
@@ -131,8 +223,11 @@ REGISTER SECTION.
     
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f43f5c3d43250859e8defa34528984a5fd5500fe
 @-webkit-keyframes flash {
   from, 50%, to {
     opacity: 1;
@@ -157,6 +252,9 @@ REGISTER SECTION.
   -webkit-animation-name: flash;
   animation-name: flash;
 }
+<<<<<<< HEAD
+>>>>>>> f43f5c3d43250859e8defa34528984a5fd5500fe
+=======
 >>>>>>> f43f5c3d43250859e8defa34528984a5fd5500fe
 
 /* *************************************************   

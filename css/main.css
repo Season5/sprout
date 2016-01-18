@@ -1,0 +1,80 @@
+/*Css file*/ 
+#nav li{
+  display:inline;
+  list-style-type:none;
+  background-color:#ffffff;
+  float:right;
+}
+#nav a{
+  padding:25px 25px;
+  background-color:#009B14;
+  text-decoration:none;
+  color:white;
+}
+#nav a:hover{
+  background-color:#ffffff;
+  color:#000000;
+}
+#space{
+  padding-bottom:140px;
+}
+.css-slideshow{
+   position: relative;
+   height: 570px;
+   +   width:100%;
+   background-size:100% 570px;
+}
++++++++++++++
+
+width:100%;
+   position: absolute;
+}
+
+
+.css-slideshow figure{
+   opacity:0;
+}
+
+
+figure:nth-child(1) {
+  animation: xfade 48s 42s infinite;
+}
+figure:nth-child(2) {
+  animation: xfade 48s 36s infinite;
+}
+figure:nth-child(3) {
+  animation: xfade 48s 30s infinite;
+}
+figure:nth-child(4) {
+  animation: xfade 48s 24s infinite;
+}
+figure:nth-child(5) {
+  animation: xfade 48s 18s infinite;
+}
+figure:nth-child(6) {
+  animation: xfade 48s 12s infinite;
+}
+figure:nth-child(7) {
+  animation: xfade 48s 6s infinite;
+}
+figure:nth-child(8) {
+  animation: xfade 48s 0s infinite;
+}
+
+@keyframes xfade{
+   0%{
+      opacity: 1;
+   }
+   10.5% {
+      opacity:1;
+   }
+   12.5%{
+      opacity: 0;
+   }
+   98% {
+      opacity:0;
+   }
+   100% {
+      opacity:1;
+   }
+}

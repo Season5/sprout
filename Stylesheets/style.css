@@ -1,0 +1,178 @@
+/* *************************************************   
+    GENERAL STYLES
+************************************************** */
+<<<<<<< HEAD
+=======
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Lora);
+>>>>>>> f43f5c3d43250859e8defa34528984a5fd5500fe
+.wrap{
+    width: 90%;
+     /*for large screens*/
+   /* max-width: 1400px;*/
+<<<<<<< HEAD
+    margin: 0 auto;
+    
+=======
+    margin: 0 auto;   
+}
+p{
+    color: #287ac3;
+    font-family: 'Lora', serif;
+}
+
+h1,h2,h3,h4,h5{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+>>>>>>> f43f5c3d43250859e8defa34528984a5fd5500fe
+}
+
+
+/* *************************************************   
+NAVIGATION
+************************************************** */
+.logo img{
+    width: 80px;
+    padding-left: 0%;
+}
+
+
+
+
+/* *************************************************   
+HERO SECTION
+************************************************** */
+.hero{
+    padding: 80px 0px;
+    background-color: grey;
+}
+
+
+
+
+
+
+
+
+
+/* *************************************************   
+ABOUT || AGENDA SECTION
+************************************************** */
+
+.about{
+    padding: 80px 0px;
+<<<<<<< HEAD
+    
+    
+}
+
+
+=======
+    background-color: #ebebeb;
+}
+
+.abt{
+     -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    border-style: outset;
+
+}
+
+.abt:hover{
+    background-color: rgba(157, 153, 145, 0.88);
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
+.agend{
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    border-style: outset;
+}
+
+.agend:hover{
+    background-color: rgba(157, 153, 145, 0.88);
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
+>>>>>>> f43f5c3d43250859e8defa34528984a5fd5500fe
+
+
+
+
+
+
+
+
+/* *************************************************   
+TWITTER SECTION
+************************************************** */
+
+
+
+
+
+
+/* *************************************************   
+SPEAKERS SECTION
+************************************************** */
+.speakers{
+    padding: 80px 0px;
+    
+}
+
+
+/* *************************************************   
+REGISTER SECTION.
+************************************************** */
+.register{
+    padding: 80px 0px;
+    text-align: center;
+}
+.register form{
+    
+}
+<<<<<<< HEAD
+
+=======
+@-webkit-keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
+>>>>>>> f43f5c3d43250859e8defa34528984a5fd5500fe
+
+/* *************************************************   
+VENUE SECTION.
+************************************************** */
+
+.venue{
+    padding: 80px 0px;
+    text-align: center;
+}
+
+
+/* *************************************************   
+QUESTIONS SECTION.
+************************************************** */
+.footer{
+    text-align: center;
+}
+

@@ -7,10 +7,13 @@
     <title>Sprout</title>
     <link rel="stylesheet" href="Stylesheets/foundation.css" />
     <link rel="stylesheet" href="Stylesheets/app.css" />
-    <link rel="stylesheet" href="Stylesheets/style.css">  
+    <link rel="stylesheet" href="Stylesheets/style.css">
+    <script type="text/javascript" src="script.js"/>  
   </head>
   <body>
-  
+  <script>
+      var myDataRef = new Firebase('https://https://torrid-fire-2128.firebaseio.com/');
+      </script>
 
   
       <!--NAVIGATION -->
@@ -158,7 +161,7 @@
       <div class="row">
           <h5 class="flash">Get your early bird tickets...don't miss out on this amazing opportunity.</h5>
           
-          <form>
+          <form id="myForm">
   <div class="row">
     <div class="medium-4 columns">
       <label>First Name
@@ -172,33 +175,34 @@
     </div>
       <div class="medium-4 columns">
       <label>Email address
-        <input type="text" placeholder="Email address">
+        <input type="email" placeholder="Email address">  
       </label>
     </div>  
   </div>
     <div class="row">
-        <div class="small-12 large-4 columns">
-            
-      
+    <div class="medium-4 columns">
+      <label>Phone Number
+        <input type="text" placeholder="Phone Number">
+      </label>
+    </div>
+     <fieldset class="medium-4 columns">
+    <legend>Gender</legend>
+    <input type="radio" name="gender" value="male" id="maleR" required><label for="maleG">Male</label>
+    <input type="radio" name="gender" value="female" id="femaleR"><label for="femaleG">Female</label>
+  </fieldset>
         
         
-        
-        
-        
-        
-        
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-            </div>
-              </div>
+      <div class="medium-4 columns">
+      <label>Select Country
+  <select>
+    <option value="husker">Kenya</option>
+    <option value="starbuck">Uganda</option>
+    <option value="hotdog">Tanzania</option>
+    <option value="apollo">Rwanda</option>
+  </select>
+</label>
+    </div>  
+  </div>
               </div>          
               
     <div class="row">
@@ -240,12 +244,11 @@
       <div class="small-12 large-12 columns">
 <table align="center">
    <tr>
-          <tr style="width:100%;"><h5>Questions?</h5></tr>
+         <h5>Questions?</h5>
           
-          <td><p>Email us at <li><a href="#">SPROUT@mobileTech.com</a></li></p></td>
-          <td><p>Twitter<li><a href="#">or tweet #SPROUT@2016</a></li></p></td>
-   </tr>
-</table>
+        <p>Email us at <li><a href="#">SPROUT@mobileTech.com</a></li></p>
+        <p>Twitter<li><a href="#">or tweet #SPROUT@2016</a></li></p></td>
+   
           </div>
       </div>
          </div>
@@ -254,6 +257,7 @@
       
 <!--twitter script 1 -->
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
+<script type="text/javascript" src="torrid-fire-2128.firebaseio.com"></script>
     <script src="js/foundation.min.js"></script>
     <script src="js/app.js"></script>
   </body>

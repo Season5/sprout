@@ -228,40 +228,7 @@ REGISTER SECTION.
 .register form{
     
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> f43f5c3d43250859e8defa34528984a5fd5500fe
-@-webkit-keyframes flash {
-  from, 50%, to {
-    opacity: 1;
-  }
-
-  25%, 75% {
-    opacity: 0;
-  }
-}
-
-@keyframes flash {
-  from, 50%, to {
-    opacity: 1;
-  }
-
-  25%, 75% {
-    opacity: 0;
-  }
-}
-
-.flash {
-  -webkit-animation-name: flash;
-  animation-name: flash;
-}
-<<<<<<< HEAD
->>>>>>> f43f5c3d43250859e8defa34528984a5fd5500fe
-=======
->>>>>>> f43f5c3d43250859e8defa34528984a5fd5500fe
 
 /* *************************************************   
 VENUE SECTION.

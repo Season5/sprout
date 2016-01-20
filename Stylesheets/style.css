@@ -86,7 +86,7 @@ HERO SECTION
    position: absolute;
    margin:0 auto;
 }
-.css-slideshow figure img{
+.css-slideshow  img{
   width:100%;
   height:470px;
 position:relative;
@@ -276,7 +276,8 @@ VENUE SECTION.
 /* *************************************************   
 QUESTIONS SECTION.
 ************************************************** */
-.footer{
+#footer{
     text-align: center;
+    list-style-type:none;
 }
 

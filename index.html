@@ -8,63 +8,11 @@
     <link rel="stylesheet" href="Stylesheets/foundation.css" />
     <link rel="stylesheet" href="Stylesheets/app.css" />
     <link rel="stylesheet" href="Stylesheets/style.css">
+    
 <script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
   </head>
   <body>
  
-   <script>
-    var signupForm = document.getElementById('signup-form');
-    var signupSuccess = document.getElementById('signup-success');
-    var signupError = document.getElementById('signup-error');
-    var signupBtn = document.getElementById('signup-button');
-    var onSignupComplete = function(error) {
-      signupBtn.disabled = false;
-      if (error) {
-        signupError.innerHTML = 'Sorry. Could not signup.';
-      } else {
-        signupSuccess.innerHTML = 'Thanks for signing up!';
-        // hide the form
-        signupForm.style.display = 'none';
-      }
-    };
-    function signup(formObj) {
-        // Store emails to firebase
-        var myFirebaseRef = new Firebase("https://amber-fire-7799.firebaseio.com/");
-        myFirebaseRef.push({
-          email: formObj.email.value,
-        }, onSignupComplete);
-        signupBtn.disabled = true;
-        return false;
-    }
-</script>
-<script>
-    // Send message
-    var contactFrom = document.getElementById('contact-form');
-    var contactSuccess = document.getElementById('contact-success');
-    var contactError = document.getElementById('contact-error');
-    var sendBtn = document.getElementById('send-button');
-    var onMessageComplete = function(error) {
-      sendBtn.disabled = false;
-      if (error) {
-        contactError.innerHTML = 'Sorry. Could not send message.';
-      } else {
-        contactSuccess.innerHTML = "Message has been sent.";
-        // hide the form
-        contactFrom.style.display = 'none';
-      }
-    };
-    function sendMessage(formObj) {
-        // Store emails to firebase
-        var myFirebaseRef = new Firebase("https://amber-fire-7799.firebaseio.com/");
-        myFirebaseRef.push({
-          name: formObj.name.value,
-          email: formObj.email.value,
-          message: formObj.message.value
-        }, onMessageComplete);
-        sendBtn.disabled = true;
-        return false;
-    }
-</script>
       <!--NAVIGATION -->
 <div id="nav" style="padding-right:20px">
       <nav class="top-bar">
@@ -209,64 +157,117 @@
       
       <div class="row">
           <h5 class="flash">Get your early bird tickets...don't miss out on this amazing opportunity.</h5>
-          
-          <form id="myForm">
-  <div class="row">
+      
+<div class="signup">
+<form class="signup-form form-inline" id="signup-form" role="form" onsubmit="return signup(this)">
+     <form id="myForm" onsubmit="signup">
+    <div class="row">
     <div class="medium-4 columns">
+     <p id="contact-success" class="text-success lead"></p>
+    <p id="contact-error" class="text-danger lead"></p>
       <label>First Name
-        <input type="text" placeholder="First Name">
+        <input class="form-control" name="name" type="text" placeholder="First Name">
       </label>
     </div>
     <div class="medium-4 columns">
       <label>Last Name
-        <input type="text" placeholder="Last Name">
+        <input class="form-control" name="name" type="text" placeholder="Last Name">
       </label>
     </div>
       <div class="medium-4 columns">
       <label>Email address
-        <input type="email" placeholder="Email address">  
+        <input class="form-control" name="email" type="email" placeholder="Your email. eg., joe@acme.com" required>  
       </label>
     </div>  
   </div>
     <div class="row">
     <div class="medium-4 columns">
       <label>Phone Number
-        <input type="text" placeholder="Phone Number">
+        <input class="form-control" name="name" type="text" placeholder="Phone Number">
       </label>
     </div>
      <fieldset class="medium-4 columns">
     <legend>Gender</legend>
-    <input type="radio" name="gender" value="male" id="maleR" required><label for="maleG">Male</label>
-    <input type="radio" name="gender" value="female" id="femaleR"><label for="femaleG">Female</label>
+    <input class="form-control" name="name" type="radio" name="gender" value="male" id="maleR" required><label for="maleG">Male</label>
+    <input class="form-control" name="name" type="radio" name="gender" value="female" id="femaleR"><label for="femaleG">Female</label>
   </fieldset>
         
-        
+        <div class="form-control" name="name">
       <div class="medium-4 columns">
       <label>Select Country
-  <select>
-    <option value="husker">Kenya</option>
-    <option value="starbuck">Uganda</option>
-    <option value="hotdog">Tanzania</option>
-    <option value="apollo">Rwanda</option>
+  <select class="form-control" name="name">
+    <option class="form-control" name="name" value="husker">Kenya</option>
+    <option class="form-control" name="name" value="starbuck">Uganda</option>
+    <option class="form-control" name="name" value="hotdog">Tanzania</option>
+    <option class="form-control" name="name" value="apollo">Rwanda</option>
   </select>
 </label>
-    </div>  
+    </div> 
+    </div>
   </div>
               </div>          
               
-    <div class="row">
+    <div class="row" class="form-control" name="name">
          <div class="input-group-button">
-    <input type="submit" class="button" value="Submit">
+    <button class="btn btn-success" id="signup-button" type="submit" >Submit</button>
+    </form>
+     </form><script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
   </div>     
-              
-              </div>          
-</form>  
-          </div>
-          </div>
-          </div>
-      
-    
-    
+              </div>
+              </div> 
+     <script>
+    var signupForm = document.getElementById('signup-form');
+    var signupSuccess = document.getElementById('signup-success');
+    var signupError = document.getElementById('signup-error');
+    var signupBtn = document.getElementById('signup-button');
+    var onSignupComplete = function(error) {
+      signupBtn.disabled = false;
+      if (error) {
+        signupError.innerHTML = 'Sorry. Could not signup.';
+      } else {
+        signupSuccess.innerHTML = 'Thanks for signing up!';
+        // hide the form
+        signupForm.style.display = 'none';
+      }
+    };
+    function signup(formObj) {
+        // Store emails to firebase
+        var myFirebaseRef = new Firebase("https://amber-fire-7799.firebaseio.com/");
+        myFirebaseRef.push({
+          email: formObj.email.value,
+        }, onSignupComplete);
+        signupBtn.disabled = true;
+        return false;
+    }
+</script>
+<script>
+    // Send message
+    var contactFrom = document.getElementById('contact-form');
+    var contactSuccess = document.getElementById('contact-success');
+    var contactError = document.getElementById('contact-error');
+    var sendBtn = document.getElementById('send-button');
+    var onMessageComplete = function(error) {
+      sendBtn.disabled = false;
+      if (error) {
+        contactError.innerHTML = 'Sorry. Could not send message.';
+      } else {
+        contactSuccess.innerHTML = "Message has been sent.";
+        // hide the form
+        contactFrom.style.display = 'none';
+      }
+    };
+    function sendMessage(formObj) {
+        // Store emails to firebase
+        var myFirebaseRef = new Firebase("https://amber-fire-7799.firebaseio.com/");
+        myFirebaseRef.push({
+          name: formObj.name.value,
+          email: formObj.email.value,
+          message: formObj.message.value
+        }, onMessageComplete);
+        sendBtn.disabled = true;
+        return false;
+    }
+</script>
       <!--Venue -->
       <hr>
       <div class="venue">

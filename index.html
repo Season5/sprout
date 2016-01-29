@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="Stylesheets/foundation.css" />
     <link rel="stylesheet" href="Stylesheets/app.css" />
     <link rel="stylesheet" href="Stylesheets/style.css">
-    
-<script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
   </head>
   <body>
  
@@ -49,25 +49,25 @@
     <img src="0cf24dd.png" width="100%" height="470" /> 
   </figure> 
   <figure> 
-    <img src="6a00e554e887238833015435777573970c.jpg" width="100%" height="470" /> 
+    <img src="images/6a00e554e887238833015435777573970c.jpg" width="100%" height="470" /> 
   </figure> 
   <figure> 
-    <img src="4596544906.jpg" width="100%" height="470" /> 
+    <img src="images/4596544906.jpg" width="100%" height="470" /> 
   </figure> 
   <figure> 
-    <img src="conference-meetings.jpg" width="100%" height="470" /> 
+    <img src="images/conference-meetings.jpg" width="100%" height="470" /> 
   </figure> 
   <figure> 
-    <img src="conference.jpg" width="100%" height="470" /> 
+    <img src="images/conference.jpg" width="100%" height="470" /> 
   </figure> 
   <figure> 
-    <img src="How-to-get-the-most-out-of-conferences.jpg" width="100%" height="470" /> 
+    <img src="images/How-to-get-the-most-out-of-conferences.jpg" width="100%" height="470" /> 
   </figure> 
   <figure> 
-    <img src="photo-header-frankfurt.jpg" width="100%" height="470" /> 
+    <img src="images/photo-header-frankfurt.jpg" width="100%" height="470" /> 
   </figure> 
   <figure> 
-    <img src="Slide 3 - Conference_0.jpg" width="100%" height="470" /> 
+    <img src="images/Slide3-Conference0.jpg" width="100%" height="470" /> 
   </figure> 
     
       </div>
@@ -158,116 +158,44 @@
       <div class="row">
           <h5 class="flash">Get your early bird tickets...don't miss out on this amazing opportunity.</h5>
       
-<div class="signup">
-<form class="signup-form form-inline" id="signup-form" role="form" onsubmit="return signup(this)">
-     <form id="myForm" onsubmit="signup">
-    <div class="row">
+          <form>
+    
     <div class="medium-4 columns">
-     <p id="contact-success" class="text-success lead"></p>
-    <p id="contact-error" class="text-danger lead"></p>
-      <label>First Name
-        <input class="form-control" name="name" type="text" placeholder="First Name">
-      </label>
+        <label></label>
+        <input id="fName" type="text" placeholder="First Name">   
     </div>
     <div class="medium-4 columns">
-      <label>Last Name
-        <input class="form-control" name="name" type="text" placeholder="Last Name">
-      </label>
+      
+        <input id="email" type="email" placeholder="email address">
     </div>
       <div class="medium-4 columns">
-      <label>Email address
-        <input class="form-control" name="email" type="email" placeholder="Your email. eg., joe@acme.com" required>  
-      </label>
+      
+        <input id="phone" type="number" placeholder="Your phone number" required>  
     </div>  
-  </div>
+             
     <div class="row">
-    <div class="medium-4 columns">
-      <label>Phone Number
-        <input class="form-control" name="name" type="text" placeholder="Phone Number">
-      </label>
-    </div>
-     <fieldset class="medium-4 columns">
-    <legend>Gender</legend>
-    <input class="form-control" name="name" type="radio" name="gender" value="male" id="maleR" required><label for="maleG">Male</label>
-    <input class="form-control" name="name" type="radio" name="gender" value="female" id="femaleR"><label for="femaleG">Female</label>
-  </fieldset>
         
-        <div class="form-control" name="name">
-      <div class="medium-4 columns">
-      <label>Select Country
-  <select class="form-control" name="name">
-    <option class="form-control" name="name" value="husker">Kenya</option>
-    <option class="form-control" name="name" value="starbuck">Uganda</option>
-    <option class="form-control" name="name" value="hotdog">Tanzania</option>
-    <option class="form-control" name="name" value="apollo">Rwanda</option>
+      <div class="medium-4 columns" id="country">
+  <select class="country" name="country">
+    <option class="country" name="name" value="husker">Kenya</option>
+    <option class="country" name="name" value="starbuck">Uganda</option>
+    <option class="country" name="name" value="hotdog">Tanzania</option>
+    <option class="country" name="name" value="apollo">Rwanda</option>
   </select>
-</label>
     </div> 
-    </div>
+    
   </div>
+              
               </div>          
               
-    <div class="row" class="form-control" name="name">
+    <div class="row" class="submit" name="name">
          <div class="input-group-button">
     <button class="btn btn-success" id="signup-button" type="submit" >Submit</button>
-    </form>
-     </form><script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
   </div>     
               </div>
+          </form>
               </div> 
-     <script>
-    var signupForm = document.getElementById('signup-form');
-    var signupSuccess = document.getElementById('signup-success');
-    var signupError = document.getElementById('signup-error');
-    var signupBtn = document.getElementById('signup-button');
-    var onSignupComplete = function(error) {
-      signupBtn.disabled = false;
-      if (error) {
-        signupError.innerHTML = 'Sorry. Could not signup.';
-      } else {
-        signupSuccess.innerHTML = 'Thanks for signing up!';
-        // hide the form
-        signupForm.style.display = 'none';
-      }
-    };
-    function signup(formObj) {
-        // Store emails to firebase
-        var myFirebaseRef = new Firebase("https://amber-fire-7799.firebaseio.com/");
-        myFirebaseRef.push({
-          email: formObj.email.value,
-        }, onSignupComplete);
-        signupBtn.disabled = true;
-        return false;
-    }
-</script>
-<script>
-    // Send message
-    var contactFrom = document.getElementById('contact-form');
-    var contactSuccess = document.getElementById('contact-success');
-    var contactError = document.getElementById('contact-error');
-    var sendBtn = document.getElementById('send-button');
-    var onMessageComplete = function(error) {
-      sendBtn.disabled = false;
-      if (error) {
-        contactError.innerHTML = 'Sorry. Could not send message.';
-      } else {
-        contactSuccess.innerHTML = "Message has been sent.";
-        // hide the form
-        contactFrom.style.display = 'none';
-      }
-    };
-    function sendMessage(formObj) {
-        // Store emails to firebase
-        var myFirebaseRef = new Firebase("https://amber-fire-7799.firebaseio.com/");
-        myFirebaseRef.push({
-          name: formObj.name.value,
-          email: formObj.email.value,
-          message: formObj.message.value
-        }, onMessageComplete);
-        sendBtn.disabled = true;
-        return false;
-    }
-</script>
+     
       <!--Venue -->
       <hr>
       <div class="venue">
@@ -304,7 +232,28 @@
          </div>
       </footer>
       
-      
+      <!--firebase script -->
+          <script>
+    var myFirebaseRef = new Firebase('https://sproutdb.firebaseio.com/');
+    $('#message').keypress(function (e){
+        if (e.keyCode == 13) {
+          var firstName = $('#fName').val();
+          var Email = $('#email').val();
+          var PhoneNumber = $('#phone').val();
+          var country = $('#country').val();    
+          myFirebaseRef.push({firstName: firstName, email: Email, message: Message, country: country});
+          $('#message').value('');
+
+        }
+    });
+
+    </script>
+          
+          
+          
+          
+          
+          
       <!--twitter script 1 -->
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
           
